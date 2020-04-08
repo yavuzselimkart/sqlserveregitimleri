@@ -1,0 +1,1174 @@
+--Ilçeler tablosunu oluşturma
+
+CREATE TABLE [dbo].[ilceler]
+(
+    [id] [INT] PRIMARY KEY IDENTITY(1, 1),
+    [ilceadi] [NVARCHAR](255) NOT NULL,
+    [sehirid] [INT] NOT NULL
+);
+
+
+--Ilceler tablosuna veri ekleme
+
+--Adana
+INSERT INTO [dbo].[ilceler] ([ilceadi], [sehirid]) VALUES 
+(N'ALADAĞ', 1),
+(N'CEYHAN', 1),
+(N'ÇUKUROVA', 1),
+(N'FEKE', 1),
+(N'İMAMOĞLU', 1),
+(N'KARAİSALI', 1),
+(N'KARATAŞ', 1),
+(N'KOZAN', 1),
+(N'POZANTI', 1),
+(N'SAİMBEYLİ', 1),
+(N'SARIÇAM', 1),
+(N'SEYHAN', 1),
+(N'TUFANBEYLİ', 1),
+(N'YUMURTALIK', 1),
+(N'YÜREĞİR', 1),
+
+--Adıyaman
+
+(N'BESNİ', 2),
+(N'ÇELİKHAN', 2),
+(N'GERGER', 2),
+(N'GÖLBAŞI', 2),
+(N'KAHTA', 2),
+(N'SAMSAT', 2),
+(N'SİNCİK', 2),
+(N'TUT', 2),
+
+--Afyonkarahisar
+
+(N'BAŞMAKÇI', 3),
+(N'BAYAT', 3),
+(N'BOLVADİN', 3),
+(N'ÇAY', 3),
+(N'ÇOBANLAR', 3),
+(N'DAZKIRI', 3),
+(N'DİNAR', 3),
+(N'EMİRDAĞ', 3),
+(N'EVCİLER', 3),
+(N'HOCALAR', 3),
+(N'İHSANİYE', 3),
+(N'İSCEHİSAR', 3),
+(N'KIZILÖREN', 3),
+(N'SANDIKLI', 3),
+(N'SİNANPAŞA', 3),
+(N'SULDANDAĞI', 3),
+(N'ŞUHUT', 3),
+
+--Ağrı
+
+(N'DİYADİN', 4),
+(N'DOĞUBEYAZIT', 4),
+(N'ELEŞKİRT', 4),
+(N'HAMUR', 4),
+(N'PATNOS', 4),
+(N'TAŞLIÇAY', 4),
+(N'TUTAK', 4),
+
+--Amasya
+
+(N'GÖYNÜCEK', 5),
+(N'GÜMÜŞHACIKÖYÜ', 5),
+(N'HAMAMÖZÜ', 5),
+(N'MERZİFON', 5),
+(N'SULUOVA', 5),
+(N'TAŞOVA', 5),
+
+--Ankara
+
+(N'AKYURT', 6),
+(N'ALTINDAĞ', 6),
+(N'AYAŞ', 6),
+(N'BALA', 6),
+(N'BEYPAZARI', 6),
+(N'ÇAMLIDERE', 6),
+(N'ÇANKAYA', 6),
+(N'ÇUBUK', 6),
+(N'ELMADAĞ', 6),
+(N'ETİMESGUT', 6),
+(N'EVREN', 6),
+(N'GÖLBAŞI', 6),
+(N'GÜDÜL', 6),
+(N'HAYMANA', 6),
+(N'KALECİK', 6),
+(N'KAZAN', 6),
+(N'KEÇİÖREN', 6),
+(N'KIZILCAHAMAM', 6),
+(N'MAMAK', 6),
+(N'NALLIHAN', 6),
+(N'POLATLI', 6),
+(N'PURSAKLAR', 6),
+(N'SİNCAN', 6),
+(N'ŞEREFLİKOÇHİSAR', 6),
+(N'YENİMAHALLE', 6),
+
+--Antalya
+
+(N'AKSEKİ', 7),
+(N'AKSU', 7),
+(N'ALANYA', 7),
+(N'DEMRE', 7),
+(N'DÖŞEMEALTI', 7),
+(N'ELMALI', 7),
+(N'FİNİKE', 7),
+(N'GAZİPAŞA', 7),
+(N'GÜNDOĞMUŞ', 7),
+(N'İBRADI', 7),
+(N'KAŞ', 7),
+(N'KEMER', 7),
+(N'KEPEZ', 7),
+(N'KONYAALTI', 7),
+(N'KORKUTELİ', 7),
+(N'KUMLUCA', 7),
+(N'MANAVGAT', 7),
+(N'MURATPAŞA', 7),
+(N'SERİK', 7),
+
+--Artvin
+
+(N'ARDANUÇ', 8),
+(N'ARHAVİ', 8),
+(N'BORÇKA', 8),
+(N'HOPA', 8),
+(N'MURGUL', 8),
+(N'ŞAVŞAT', 8),
+(N'YUSUFELİ', 8),
+
+--Aydın
+
+(N'BOZDOĞAN', 9),
+(N'BUHARKENT', 9),
+(N'ÇİNE', 9),
+(N'DİDİM', 9),
+(N'EFELER', 9),
+(N'GERMENCİK', 9),
+(N'İNCİRLİOVA', 9),
+(N'KARACASU', 9),
+(N'KARPUZLU', 9),
+(N'KOÇARLI', 9),
+(N'KÖŞK', 9),
+(N'KUŞADASI', 9),
+(N'KUYUCAK', 9),
+(N'NAZİLLİ', 9),
+(N'SÖKE', 9),
+(N'SULTANHİSAR', 9),
+(N'YENİPAZAR', 9),
+
+--Balıkesir
+
+(N'ALTIEYLÜL', 10),
+(N'AYVALIK', 10),
+(N'BALYA', 10),
+(N'BANDIRMA', 10),
+(N'BİGADİÇ', 10),
+(N'BURHANİYE', 10),
+(N'DURSUNBEY', 10),
+(N'EDREMİT', 10),
+(N'ERDEK', 10),
+(N'GÖMEÇ', 10),
+(N'GÖNEN', 10),
+(N'HAVRAN', 10),
+(N'İVRİNDİ', 10),
+(N'KARESİ', 10),
+(N'KEPSUT', 10),
+(N'MANYAS', 10),
+(N'MARMARA', 10),
+(N'SAVAŞTEPE', 10),
+(N'SINDIRGI', 10),
+(N'SUSURLUK', 10),
+
+--Bilecik
+
+(N'BOZÜYÜK', 11),
+(N'GÖLPAZARI', 11),
+(N'İNHİSAR', 11),
+(N'OSMANELİ', 11),
+(N'PAZARYERİ', 11),
+(N'SÖĞÜT', 11),
+(N'YENİPAZAR', 11),
+
+--Bingöl
+
+(N'ADAKLI', 12),
+(N'GENÇ', 12),
+(N'KARLIOVA', 12),
+(N'KİGI', 12),
+(N'SOLHAN', 12),
+(N'YAYLADERE', 12),
+(N'YEDİSU', 12),
+
+--Bitlis
+
+(N'ADİLCEVAZ', 13),
+(N'AHLAT', 13),
+(N'HİZAN', 13),
+(N'GÜROYMAK', 13),
+(N'MUTKİ', 13),
+(N'TATVAN', 13),
+
+--Bolu
+
+(N'DÖRTDİVAN', 14),
+(N'GEREDE', 14),
+(N'GÖYNÜK', 14),
+(N'KIBRISCIK', 14),
+(N'MENGEN', 14),
+(N'MUDURNU', 14),
+(N'SEBEN', 14),
+(N'YENİÇAĞA', 14),
+
+--Burdur
+
+(N'AĞLASUN', 15),
+(N'ALTINYAYLA', 15),
+(N'BUCAK', 15),
+(N'ÇAVDIR', 15),
+(N'ÇELTİKÇİ', 15),
+(N'GÖLHİSAR', 15),
+(N'KARAMANLI', 15),
+(N'KEMER', 15),
+(N'TEFENNİ', 15),
+(N'YEŞİLOVA', 15),
+
+--Bursa
+
+(N'BÜYÜK ORHAN', 16),
+(N'GEMLİK', 16),
+(N'GÜRSU', 16),
+(N'HARMANCIK', 16),
+(N'İNEGÖL', 16),
+(N'İZNİK', 16),
+(N'KARACABEY', 16),
+(N'KELES', 16),
+(N'KESTEL', 16),
+(N'MUDANYA', 16),
+(N'MUSTAFA K. PAŞA', 16),
+(N'NİLÜFER', 16),
+(N'ORHANELİ', 16),
+(N'ORHANGAZİ', 16),
+(N'OSMANGAZİ', 16),
+(N'YENİŞEHİR', 16),
+(N'YILDIRIM', 16),
+
+--Çanakkale
+
+(N'AYVACIK', 17),
+(N'BAYRAMİÇ', 17),
+(N'BİGA', 17),
+(N'BOZCAADA', 17),
+(N'ÇAN', 17),
+(N'ECEABAT', 17),
+(N'EZİNE', 17),
+(N'GELİBOLU', 17),
+(N'GÖKÇEADA', 17),
+(N'LAPSEKİ', 17),
+(N'YENİCE', 17),
+
+--Çankırı
+
+(N'ATKARACALAR', 18),
+(N'BAYRAMÖREN', 18),
+(N'ÇERKEŞ', 18),
+(N'ELDİVAN', 18),
+(N'ILGAZ', 18),
+(N'KIZILIRMAK', 18),
+(N'KORGUN', 18),
+(N'KURŞUNLU', 18),
+(N'ORTA', 18),
+(N'ŞABANÖZÜ', 18),
+(N'YAPRAKLI', 18),
+
+--Çorum
+
+(N'ALACA', 19),
+(N'BAYAT', 19),
+(N'BOĞAZKALE', 19),
+(N'DODURGA', 19),
+(N'İSKİLİP', 19),
+(N'KARGI', 19),
+(N'LAÇİN', 19),
+(N'MECİTÖZÜ', 19),
+(N'OĞUZLAR', 19),
+(N'ORTAKÖY', 19),
+(N'OSMANCIK', 19),
+(N'SUNGURLU', 19),
+(N'UĞURLUDAĞ', 19),
+
+--Denizli
+
+(N'ACIPAYAM', 20),
+(N'BABADAĞ', 20),
+(N'BAKLAN', 20),
+(N'BEKİLLİ', 20),
+(N'BEYAĞAÇ', 20),
+(N'BOZKURT', 20),
+(N'BULDAN', 20),
+(N'ÇAL', 20),
+(N'ÇAMELİ', 20),
+(N'ÇARDAK', 20),
+(N'ÇİVRİL', 20),
+(N'GÜNEY', 20),
+(N'HONAZ', 20),
+(N'KALE', 20),
+(N'MERKEZEFENDİ', 20),
+(N'PAMUKKALE', 20),
+(N'SARAYKÖY', 20),
+(N'SERİNHİSAR', 20),
+(N'TAVAS', 20),
+
+--Diyarbakır
+
+(N'BAĞLAR', 21),
+(N'BİSMİL', 21),
+(N'ÇERMİK', 21),
+(N'ÇINAR', 21),
+(N'ÇÜNGÜŞ', 21),
+(N'DİCLE', 21),
+(N'EĞİL', 21),
+(N'ERGANİ', 21),
+(N'HANİ', 21),
+(N'HAZRO', 21),
+(N'KAYAPINAR', 21),
+(N'KOCAKÖY', 21),
+(N'KULP', 21),
+(N'LİCE', 21),
+(N'SİLVAN', 21),
+(N'SUR', 21),
+(N'YENİŞEHİR', 21),
+
+--Edirne
+
+(N'ENEZ', 22),
+(N'HAVSA', 22),
+(N'İPSALA', 22),
+(N'KEŞAN', 22),
+(N'LALAPAŞA', 22),
+(N'MERİÇ', 22),
+(N'SÜLOĞLU', 22),
+(N'UZUNKÖPRÜ', 22),
+
+--Elazığ
+
+(N'AĞIN', 23),
+(N'ALACAKAYA', 23),
+(N'ARICAK', 23),
+(N'BASKİL', 23),
+(N'KARAKOÇAN', 23),
+(N'KEBAN', 23),
+(N'KOVANCILAR', 23),
+(N'MADEN', 23),
+(N'PALU', 23),
+(N'SİVRİCE', 23),
+
+--Erzincan
+
+(N'ÇAYIRLI', 24),
+(N'İLİÇ', 24),
+(N'KEMAH', 24),
+(N'KEMALİYE', 24),
+(N'OTLUKBELİ', 24),
+(N'REFAHİYE', 24),
+(N'TERCAN', 24),
+(N'ÜZÜMLÜ', 24),
+
+--Erzurum
+
+(N'AŞKALE', 25),
+(N'AZİZİYE', 25),
+(N'ÇAT', 25),
+(N'HINIS', 25),
+(N'HORASAN', 25),
+(N'İSPİR', 25),
+(N'KARAÇOBAN', 25),
+(N'KARAYAZI', 25),
+(N'KÖPRÜKÖY', 25),
+(N'NARMAN', 25),
+(N'OLTU', 25),
+(N'OLUR', 25),
+(N'PALANDÖKEN', 25),
+(N'PASİNLER', 25),
+(N'PAZARYOLU', 25),
+(N'ŞENKAYA', 25),
+(N'TEKMAN', 25),
+(N'TORTUM', 25),
+(N'UZUNDERE', 25),
+(N'YAKUTİYE', 25),
+
+--Eskişehir
+
+(N'ALPU', 26),
+(N'BEYLİKOVA', 26),
+(N'ÇİFTELER', 26),
+(N'GÜNYÜZÜ', 26),
+(N'HAN', 26),
+(N'İNÖNÜ', 26),
+(N'MAHMUDİYE', 26),
+(N'MİHALGAZİ', 26),
+(N'MİHALIÇÇIK', 26),
+(N'ODUNPAZARI', 26),
+(N'SARICAKAYA', 26),
+(N'SEYİTGAZİ', 26),
+(N'SİVRİHİSAR', 26),
+(N'TEPEBAŞI', 26),
+
+--Gaziantep
+
+(N'ARABAN', 27),
+(N'İSLAHİYE', 27),
+(N'KARKAMIŞ', 27),
+(N'NİZİP', 27),
+(N'NURDAĞI', 27),
+(N'OĞUZELİ', 27),
+(N'ŞAHİNBEY', 27),
+(N'ŞEHİT KAMİL', 27),
+(N'YAVUZELİ', 27),
+
+--Giresun
+
+(N'ALUCRA', 28),
+(N'BULANCAK', 28),
+(N'ÇAMOLUK', 28),
+(N'ÇANAKÇI', 28),
+(N'DERELİ', 28),
+(N'DOĞANKENT', 28),
+(N'ESPİYE', 28),
+(N'EYNESİL', 28),
+(N'GÖRELE', 28),
+(N'GÜCE', 28),
+(N'KEŞAP', 28),
+(N'PİRAZİZ', 28),
+(N'ŞEBİNKARAHİSAR', 28),
+(N'TİREBOLU', 28),
+(N'YAĞLIDERE', 28),
+
+--Gümüşhane
+
+(N'KELKİT', 29),
+(N'KÖSE', 29),
+(N'KÜRTÜN', 29),
+(N'ŞİRAN', 29),
+(N'TORUL', 29),
+
+--Hakkari
+
+(N'ÇUKURCA', 30),
+(N'ŞEMDİNLİ', 30),
+(N'YÜKSEKOVA', 30),
+
+--Hatay
+
+(N'ALTINÖZÜ', 31),
+(N'ANTAKYA', 31),
+(N'ARSUZ', 31),
+(N'BELEN', 31),
+(N'DEFNE', 31),
+(N'DÖRTYOL', 31),
+(N'ERZİN', 31),
+(N'HASSA', 31),
+(N'İSKENDERUN', 31),
+(N'KIRIKHAN', 31),
+(N'KUMLU', 31),
+(N'PAYAS', 31),
+(N'REYHANLI', 31),
+(N'SAMANDAĞ', 31),
+(N'YAYLADAĞI', 31),
+
+--Isparta
+
+(N'AKSU', 32),
+(N'ATABEY', 32),
+(N'EĞİRDİR', 32),
+(N'GELENDOST', 32),
+(N'GÖNEN', 32),
+(N'KEÇİBORLU', 32),
+(N'SENİRKENT', 32),
+(N'SÜTÇÜLER', 32),
+(N'ŞARKİKARAAĞAÇ', 32),
+(N'ULUBORLU', 32),
+(N'YALVAÇ', 32),
+(N'YENİŞARBADEMLİ', 32),
+
+--Mersin
+
+(N'AKDENİZ', 33),
+(N'ANAMUR', 33),
+(N'AYDINCIK', 33),
+(N'BOZYAZI', 33),
+(N'ÇAMLIYAYLA', 33),
+(N'ERDEMLİ', 33),
+(N'GÜLNAR', 33),
+(N'MEZİTLİ', 33),
+(N'MUT', 33),
+(N'SİLİFKE', 33),
+(N'TARSUS', 33),
+(N'TOROSLAR', 33),
+(N'YENİŞEHİR', 33),
+
+--İstanbul
+
+(N'ADALAR', 34),
+(N'ARNAVUTKÖY', 34),
+(N'ATAŞEHİR', 34),
+(N'AVCILAR', 34),
+(N'BAĞCILAR', 34),
+(N'BAHÇELİEVLER', 34),
+(N'BAKIRKÖY', 34),
+(N'BAŞAKŞEHİR', 34),
+(N'BAYRAMPAŞA', 34),
+(N'BEŞİKTAŞ', 34),
+(N'BEYKOZ', 34),
+(N'BEYLİKDÜZÜ', 34),
+(N'BEYOĞLU', 34),
+(N'BÜYÜKÇEKMECE', 34),
+(N'ÇATALCA', 34),
+(N'ÇEKMEKÖY', 34),
+(N'ESENLER', 34),
+(N'ESENYURT', 34),
+(N'EYÜPSULTAN', 34),
+(N'FATİH', 34),
+(N'GAZİOSMANPAŞA', 34),
+(N'GÜNGÖREN', 34),
+(N'KADIKÖY', 34),
+(N'KAĞITHANE', 34),
+(N'KARTAL', 34),
+(N'KÜÇÜKÇEKMECE', 34),
+(N'MALTEPE', 34),
+(N'PENDİK', 34),
+(N'SANCAKTEPE', 34),
+(N'SARIYER', 34),
+(N'SİLİVRİ', 34),
+(N'SULTANBEYLİ', 34),
+(N'SULTANGAZİ', 34),
+(N'ŞİLE', 34),
+(N'ŞİŞLİ', 34),
+(N'TUZLA', 34),
+(N'ÜMRANİYE', 34),
+(N'ÜSKÜDAR', 34),
+(N'ZEYTİNBURNU', 34),
+
+--İzmir
+
+(N'ALİAĞA', 35),
+(N'BALÇOVA', 35),
+(N'BAYINDIR', 35),
+(N'BAYRAKLI', 35),
+(N'BERGAMA', 35),
+(N'BEYDAĞ', 35),
+(N'BORNOVA', 35),
+(N'BUCA', 35),
+(N'ÇEŞME', 35),
+(N'ÇİĞLİ', 35),
+(N'DİKİLİ', 35),
+(N'FOÇA', 35),
+(N'GAZİEMİR', 35),
+(N'GÜZELBAHÇE', 35),
+(N'KARABAĞLAR', 35),
+(N'KARABURUN', 35),
+(N'KARŞIYAKA', 35),
+(N'KEMALPAŞA', 35),
+(N'KINIK', 35),
+(N'KİRAZ', 35),
+(N'KONAK', 35),
+(N'MENDERES', 35),
+(N'MENEMEN', 35),
+(N'NARLIDERE', 35),
+(N'ÖDEMİŞ', 35),
+(N'SEFERİHİSAR', 35),
+(N'SELÇUK', 35),
+(N'TİRE', 35),
+(N'TORBALI', 35),
+(N'URLA', 35),
+
+--Kars
+
+(N'AKYAKA', 36),
+(N'ARPAÇAY', 36),
+(N'DİGOR', 36),
+(N'KAĞIZMAN', 36),
+(N'SARIKAMIŞ', 36),
+(N'SELİM', 36),
+(N'SUSUZ', 36),
+
+--Kastamonu
+
+(N'ABANA', 37),
+(N'AĞLI', 37),
+(N'ARAÇ', 37),
+(N'AZDAVAY', 37),
+(N'BOZKURT', 37),
+(N'CİDE', 37),
+(N'ÇATALZEYTİN', 37),
+(N'DADAY', 37),
+(N'DEVREKANİ', 37),
+(N'DOĞANYURT', 37),
+(N'HANÖNÜ', 37),
+(N'İHSANGAZİ', 37),
+(N'İNEBOLU', 37),
+(N'KÜRE', 37),
+(N'PINARBAŞI', 37),
+(N'SEYDİLER', 37),
+(N'ŞENPAZAR', 37),
+(N'TAŞKÖPRÜ', 37),
+(N'TOSYA', 37),
+
+--Kayseri
+
+(N'AKKIŞLA', 38),
+(N'BÜNYAN', 38),
+(N'DEVELİ', 38),
+(N'FELAHİYE', 38),
+(N'HACILAR', 38),
+(N'İNCESU', 38),
+(N'KOCASİNAN', 38),
+(N'MELİKGAZİ', 38),
+(N'ÖZVATAN', 38),
+(N'PINARBAŞI', 38),
+(N'SARIOĞLAN', 38),
+(N'SARIZ', 38),
+(N'TALAS', 38),
+(N'TOMARZA', 38),
+(N'YAHYALI', 38),
+(N'YEŞİLHİSAR', 38),
+
+--Kırklareli
+
+(N'BABAESKİ', 39),
+(N'DEMİRKÖY', 39),
+(N'KOFÇAZ', 39),
+(N'LÜLEBURGAZ', 39),
+(N'PEHLİVANKÖY', 39),
+(N'PINARHİSAR', 39),
+(N'VİZE', 39),
+
+--Kırşehir
+
+(N'AKÇAKENT', 40),
+(N'AKPINAR', 40),
+(N'BOZTEPE', 40),
+(N'ÇİÇEKDAĞI', 40),
+(N'KAMAN', 40),
+(N'MUCUR', 40),
+
+--Kocaeli
+
+(N'BAŞİSKELE', 41),
+(N'ÇAYIROVA', 41),
+(N'DARICA', 41),
+(N'DERİNCE', 41),
+(N'DİLOVASI', 41),
+(N'GEBZE', 41),
+(N'GÖLCÜK', 41),
+(N'İZMİT', 41),
+(N'KANDIRA', 41),
+(N'KARAMÜRSEL', 41),
+(N'KARTEPE', 41),
+(N'KÖRFEZ', 41),
+
+--Konya
+
+(N'AHIRLI', 42),
+(N'AKÖREN', 42),
+(N'AKŞEHİR', 42),
+(N'ALTINEKİN', 42),
+(N'BEYŞEHİR', 42),
+(N'BOZKIR', 42),
+(N'CİHANBEYLİ', 42),
+(N'ÇELTİK', 42),
+(N'ÇUMRA', 42),
+(N'DERBENT', 42),
+(N'DEREBUCAK', 42),
+(N'DOĞANHİSAR', 42),
+(N'EMİRGAZİ', 42),
+(N'EREĞLİ', 42),
+(N'GÜNEYSINIR', 42),
+(N'HADİM', 42),
+(N'HALKAPINAR', 42),
+(N'HÜYÜK', 42),
+(N'ILGIN', 42),
+(N'KADINHANI', 42),
+(N'KARAPINAR', 42),
+(N'KARATAY', 42),
+(N'KULU', 42),
+(N'MERAM', 42),
+(N'SARAYÖNÜ', 42),
+(N'SELÇUKLU', 42),
+(N'SEYDİŞEHİR', 42),
+(N'TAŞKENT', 42),
+(N'TUZLUKÇU', 42),
+(N'YALIHÜYÜK', 42),
+(N'YUNAK', 42),
+
+--Kütahya
+
+(N'ALTINTAŞ', 43),
+(N'ASLANAPA', 43),
+(N'ÇAVDARHİSAR', 43),
+(N'DOMANİÇ', 43),
+(N'DUMLUPINAR', 43),
+(N'EMET', 43),
+(N'GEDİZ', 43),
+(N'HİSARCIK', 43),
+(N'PAZARLAR', 43),
+(N'SİMAV', 43),
+(N'ŞAPHANE', 43),
+(N'TAVŞANLI', 43),
+
+--Malatya
+
+(N'AKÇADAĞ', 44),
+(N'ARAPGİR', 44),
+(N'ARGUVAN', 44),
+(N'BATTALGAZİ', 44),
+(N'DARENDE', 44),
+(N'DOĞANŞEHİR', 44),
+(N'DOĞANYOL', 44),
+(N'HEKİMHAN', 44),
+(N'KALE', 44),
+(N'KULUNCAK', 44),
+(N'PÜTÜRGE', 44),
+(N'YAZIHAN', 44),
+(N'YEŞİLYURT', 44),
+
+--Manisa
+
+(N'AHMETLİ', 45),
+(N'AKHİSAR', 45),
+(N'ALAŞEHİR', 45),
+(N'DEMİRCİ', 45),
+(N'GÖLMARMARA', 45),
+(N'GÖRDES', 45),
+(N'KIRKAĞAÇ', 45),
+(N'KÖPRÜBAŞI', 45),
+(N'KULA', 45),
+(N'SALİHLİ', 45),
+(N'SARIGÖL', 45),
+(N'SARUHANLI', 45),
+(N'SELENDİ', 45),
+(N'SOMA', 45),
+(N'ŞEHZADELER', 45),
+(N'TURGUTLU', 45),
+(N'YUNUSEMRE', 45),
+
+--Kahramanmaraş
+
+(N'AFŞİN', 46),
+(N'ANDIRIN', 46),
+(N'ÇAĞLAYANCERİT', 46),
+(N'DULKADİROĞLU', 46),
+(N'EKİNÖZÜ', 46),
+(N'ELBİSTAN', 46),
+(N'GÖKSUN', 46),
+(N'NURHAK', 46),
+(N'ONİKİŞUBAT', 46),
+(N'PAZARCIK', 46),
+(N'TÜRKOĞLU', 46),
+
+--Mardin
+
+(N'ARTUKLU', 47),
+(N'DARGEÇİT', 47),
+(N'DERİK', 47),
+(N'KIZILTEPE', 47),
+(N'MAZIDAĞI', 47),
+(N'MİDYAT', 47),
+(N'NUSAYBİN', 47),
+(N'ÖMERLİ', 47),
+(N'SAVUR', 47),
+(N'YEŞİLLİ', 47),
+
+--Muğla
+
+(N'BODRUM', 48),
+(N'DALAMAN', 48),
+(N'DATÇA', 48),
+(N'FETHİYE', 48),
+(N'KAVAKLIDERE', 48),
+(N'KÖYCEĞİZ', 48),
+(N'MARMARİS', 48),
+(N'MENTEŞE', 48),
+(N'MİLAS', 48),
+(N'ORTACA', 48),
+(N'SEYDİKEMER', 48),
+(N'ULA', 48),
+(N'YATAĞAN', 48),
+
+--Muş
+
+(N'BULANIK', 49),
+(N'HASKÖY', 49),
+(N'KORKUT', 49),
+(N'MALAZGİRT', 49),
+(N'VARTO', 49),
+
+--Nevşehir
+
+(N'ACIGÖL', 50),
+(N'AVANOS', 50),
+(N'DERİNKUYU', 50),
+(N'GÜLŞEHİR', 50),
+(N'HACIBEKTAŞ', 50),
+(N'KOZAKLI', 50),
+(N'ÜRGÜP', 50),
+
+--Niğde
+
+(N'ALTUNHİSAR', 51),
+(N'BOR', 51),
+(N'ÇAMARDI', 51),
+(N'ÇİFTLİK', 51),
+(N'ULUKIŞLA', 51),
+
+--Ordu
+
+(N'AKKUŞ', 52),
+(N'ALTINORDU', 52),
+(N'AYBASTI', 52),
+(N'ÇAMAŞ', 52),
+(N'ÇATALPINAR', 52),
+(N'ÇAYBAŞI', 52),
+(N'FATSA', 52),
+(N'GÖLKÖY', 52),
+(N'GÜLYALI', 52),
+(N'GÜRGENTEPE', 52),
+(N'İKİZCE', 52),
+(N'KABADÜZ', 52),
+(N'KABATAŞ', 52),
+(N'KORGAN', 52),
+(N'KUMRU', 52),
+(N'MESUDİYE', 52),
+(N'PERŞEMBE', 52),
+(N'ULUBEY', 52),
+(N'ÜNYE', 52),
+
+--Rize
+
+(N'ARDEŞEN', 53),
+(N'ÇAMLIHEMŞİN', 53),
+(N'ÇAYELİ', 53),
+(N'DEREPAZARI', 53),
+(N'FINDIKLI', 53),
+(N'GÜNEYSU', 53),
+(N'HEMŞİN', 53),
+(N'İKİZDERE', 53),
+(N'İYİDERE', 53),
+(N'KALKANDERE', 53),
+(N'PAZAR', 53),
+
+--Sakarya
+
+(N'ADAPAZARI', 54),
+(N'AKYAZI', 54),
+(N'ARİFİYE', 54),
+(N'ERENLER', 54),
+(N'FERİZLİ', 54),
+(N'GEYVE', 54),
+(N'HENDEK', 54),
+(N'KARAPÜRÇEK', 54),
+(N'KARASU', 54),
+(N'KAYNARCA', 54),
+(N'KOCAALİ', 54),
+(N'PAMUKOVA', 54),
+(N'SAPANCA', 54),
+(N'SERDİVAN', 54),
+(N'SÖĞÜTLÜ', 54),
+(N'TARAKLI', 54),
+
+--Samsun
+
+(N'19 MAYIS', 55),
+(N'ALAÇAM', 55),
+(N'ASARCIK', 55),
+(N'ATAKUM', 55),
+(N'AYVACIK', 55),
+(N'BAFRA', 55),
+(N'CANİK', 55),
+(N'ÇARŞAMBA', 55),
+(N'HAVZA', 55),
+(N'İLKADIM', 55),
+(N'KAVAK', 55),
+(N'LADİK', 55),
+(N'SALIPAZARI', 55),
+(N'TEKKEKÖY', 55),
+(N'TERME', 55),
+(N'VEZİRKÖPRÜ', 55),
+(N'YAKAKENT', 55),
+
+--Siirt
+
+(N'BAYKAN', 56),
+(N'ERUH', 56),
+(N'KURTALAN', 56),
+(N'PERVARİ', 56),
+(N'ŞİRVAN', 56),
+(N'TİLLO', 56),
+
+--Sinop
+
+(N'AYANCIK', 57),
+(N'BOYABAT', 57),
+(N'DİKMEN', 57),
+(N'DURAĞAN', 57),
+(N'ERFELEK', 57),
+(N'GERZE', 57),
+(N'SARAYDÜZÜ', 57),
+(N'TÜRKELİ', 57),
+
+--Sivas
+
+(N'AKINCILAR', 58),
+(N'ALTINYAYLA', 58),
+(N'DİVRİĞİ', 58),
+(N'DOĞANŞAR', 58),
+(N'GEMEREK', 58),
+(N'GÖLOVA', 58),
+(N'GÜRÜN', 58),
+(N'HAFİK', 58),
+(N'İMRANLI', 58),
+(N'KANGAL', 58),
+(N'KOYULHİSAR', 58),
+(N'SUŞEHRİ', 58),
+(N'ŞARKIŞLA', 58),
+(N'ULAŞ', 58),
+(N'YILDIZELİ', 58),
+(N'ZARA', 58),
+
+--Tekirdağ
+
+(N'ÇERKEZKÖY', 59),
+(N'ÇORLU', 59),
+(N'ERGENE', 59),
+(N'HAYRABOLU', 59),
+(N'KAPAKLI', 59),
+(N'MALKARA', 59),
+(N'MARMARA EREĞLİSİ', 59),
+(N'MURATLI', 59),
+(N'SARAY', 59),
+(N'SÜLEYMANPAŞA', 59),
+(N'ŞARKÖY', 59),
+
+--Tokat
+
+(N'ALMUS', 60),
+(N'ARTOVA', 60),
+(N'BAŞÇİFTLİK', 60),
+(N'ERBAA', 60),
+(N'NİKSAR', 60),
+(N'PAZAR', 60),
+(N'REŞADİYE', 60),
+(N'SULUSARAY', 60),
+(N'TURHAL', 60),
+(N'YEŞİLYURT', 60),
+(N'ZİLE', 60),
+
+--Trabzon
+
+(N'AKÇAABAT', 61),
+(N'ARAKLI', 61),
+(N'ARSİN', 61),
+(N'BEŞİKDÜZÜ', 61),
+(N'ÇARŞIBAŞI', 61),
+(N'ÇAYKARA', 61),
+(N'DERNEKPAZARI', 61),
+(N'DÜZKÖY', 61),
+(N'HAYRAT', 61),
+(N'KÖPRÜBAŞI', 61),
+(N'MAÇKA', 61),
+(N'OF', 61),
+(N'ORTAHİSAR', 61),
+(N'SÜRMENE', 61),
+(N'ŞALPAZARI', 61),
+(N'TONYA', 61),
+(N'VAKFIKEBİR', 61),
+(N'YOMRA', 61),
+
+--Tunceli
+
+(N'ÇEMİŞGEZEK', 62),
+(N'HOZAT', 62),
+(N'MAZGİRT', 62),
+(N'NAZİMİYE', 62),
+(N'OVACIK', 62),
+(N'PERTEK', 62),
+(N'PÜLÜMÜR', 62),
+
+--Şanlıurfa
+
+(N'AKÇAKALE', 63),
+(N'BİRECİK', 63),
+(N'BOZOVA', 63),
+(N'CEYLANPINAR', 63),
+(N'EYYÜBİYE', 63),
+(N'HALFETİ', 63),
+(N'HALİLİYE', 63),
+(N'HARRAN', 63),
+(N'HİLVAN', 63),
+(N'KARAKÖPRÜ', 63),
+(N'SİVEREK', 63),
+(N'SURUÇ', 63),
+(N'VİRANŞEHİR', 63),
+
+--Uşak
+
+(N'BANAZ', 64),
+(N'EŞME', 64),
+(N'KARAHALLI', 64),
+(N'SİVASLI', 64),
+(N'ULUBEY', 64),
+
+--Van
+
+(N'BAHÇESARAY', 65),
+(N'BAŞKALE', 65),
+(N'ÇALDIRAN', 65),
+(N'ÇATAK', 65),
+(N'EDREMİT', 65),
+(N'ERCİŞ', 65),
+(N'GEVAŞ', 65),
+(N'GÜRPINAR', 65),
+(N'İPEKYOLU', 65),
+(N'MURADİYE', 65),
+(N'ÖZALP', 65),
+(N'SARAY', 65),
+(N'TUŞBA', 65),
+
+--Yozgat
+
+(N'AKDAĞMADENİ', 66),
+(N'AYDINCIK', 66),
+(N'BOĞAZLIYAN', 66),
+(N'ÇANDIR', 66),
+(N'ÇAYIRALAN', 66),
+(N'ÇEKEREK', 66),
+(N'KADIŞEHRİ', 66),
+(N'SARAYKENT', 66),
+(N'SARIKAYA', 66),
+(N'SORGUN', 66),
+(N'ŞEFAATLI', 66),
+(N'YENİFAKILI', 66),
+(N'YERKÖY', 66),
+
+--Zonguldak
+
+(N'ALAPLI', 67),
+(N'ÇAYCUMA', 67),
+(N'DEVREK', 67),
+(N'EREĞLİ', 67),
+(N'GÖKÇEBEY', 67),
+(N'KİLİMLİ', 67),
+(N'KOZLU', 67),
+
+--Aksaray
+
+(N'AĞAÇÖREN', 68),
+(N'ESKİL', 68),
+(N'GÜLAĞAÇ', 68),
+(N'GÜZELYURT', 68),
+(N'ORTAKÖY', 68),
+(N'SARIYAHŞİ', 68),
+
+--Bayburt
+
+(N'AYDINTEPE', 69),
+(N'DEMİRÖZÜ', 69),
+
+--Karaman
+
+(N'AYRANCI', 70),
+(N'BAŞYAYLA', 70),
+(N'ERMENEK', 70),
+(N'KAZIMKARABEKİR', 70),
+(N'SARIVELİLER', 70),
+
+--Kırıkkale
+
+(N'BAHŞİLİ', 71),
+(N'BALIŞEYH', 71),
+(N'ÇELEBİ', 71),
+(N'DERİCE', 71),
+(N'KARAKEÇİLİ', 71),
+(N'KESKİN', 71),
+(N'SULAKYURT', 71),
+(N'YAHŞİHAN', 71),
+
+--Batman
+
+(N'BEŞİRİ', 72),
+(N'GERCÜŞ', 72),
+(N'HASANKEYF', 72),
+(N'KOZLUK', 72),
+(N'SASON', 72),
+
+--Şırnak
+
+(N'BEYTÜŞŞEBAP', 73),
+(N'CİZRE', 73),
+(N'GÜÇLÜKONAK', 73),
+(N'İDİL', 73),
+(N'SİLOPİ', 73),
+(N'ULUDERE', 73),
+
+--Bartın
+
+(N'AMASRA', 74),
+(N'KURUCAŞİLE', 74),
+(N'ULUS', 74),
+
+--Ardahan
+
+(N'ÇILDIR', 75),
+(N'DAMAL', 75),
+(N'GÖLE', 75),
+(N'HANAK', 75),
+(N'POSOF', 75),
+
+--Iğdır
+
+(N'ARALIK', 76),
+(N'TUZLUCA', 76),
+(N'KARAKOYUNLU', 76),
+
+--Yalova
+
+(N'ALTINOVA', 77),
+(N'ARMUTLU', 77),
+(N'ÇINARCIK', 77),
+(N'ÇİFTLİKKÖY', 77),
+(N'TERMAL', 77),
+
+--Karabük
+
+(N'EFLANİ', 78),
+(N'ESKİPAZAR', 78),
+(N'OVACIK', 78),
+(N'SAFRANBOLU', 78),
+(N'YENİCE', 78),
+
+--Kilis
+
+(N'ELBEYLİ', 79),
+(N'MUSABEYLİ', 79),
+(N'POLATELİ', 79),
+
+--Osmaniye
+
+(N'BAHÇE', 80),
+(N'DÜZİÇİ', 80),
+(N'HASANBEYLİ', 80),
+(N'KADİRLİ', 80),
+(N'SUMBAS', 80),
+(N'TOPRAKKALE', 80),
+
+--Düzce
+
+(N'AKÇAKOCA', 81),
+(N'CUMAYERİ', 81),
+(N'ÇİLİMLİ', 81),
+(N'GÖLYAKA', 81),
+(N'GÜMÜŞOVA', 81),
+(N'KAYNAŞLI', 81),
+(N'YIĞILCA', 81)
+
