@@ -2,7 +2,10 @@ CREATE TABLE [dbo].[iller]
 (
     [id] [INT] PRIMARY KEY IDENTITY(1, 1),
     [sehiradi] [NVARCHAR](255) NULL
-); --Iller tablosuna veri ekleme   
+); 
+
+--Iller tablosuna veri ekleme   
+
 INSERT INTO [dbo].[iller]
 (
     [sehiradi]
