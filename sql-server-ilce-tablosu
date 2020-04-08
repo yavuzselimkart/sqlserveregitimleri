@@ -7,7 +7,6 @@ CREATE TABLE [dbo].[ilceler]
     [sehirid] [INT] NOT NULL
 );
 
-
 --Ilceler tablosuna veri ekleme
 
 --Adana
