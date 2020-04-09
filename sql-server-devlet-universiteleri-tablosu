@@ -148,4 +148,3 @@ VALUES
 ('Zonguldak Bülent Ecevit Üniversitesi', 'ZONGULDAK');
 
 
-SELECT * FROM DevletUniversiteleri du
