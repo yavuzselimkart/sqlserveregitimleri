@@ -1,0 +1,82 @@
+--Buradaki ayarları yapmalısınız.
+
+sp_configure 'show advanced options', 1
+GO
+RECONFIGURE;
+GO
+sp_configure 'Ole Automation Procedures', 1
+GO
+RECONFIGURE;
+GO
+sp_configure 'show advanced options', 1
+GO
+RECONFIGURE;
+GO
+
+--Sonrasında aşağıdaki prosedürü oluşturmalısınız
+
+CREATE PROCEDURE TCKimlikNoDogrula
+    @TCKimlikNo NVARCHAR(50),
+    @Ad NVARCHAR(50),
+    @Soyad NVARCHAR(50),
+    @DogumYili NVARCHAR(10)
+AS
+BEGIN
+    SET NOCOUNT ON;
+    DECLARE @RequestBody VARCHAR(1000)
+        = '<soap12:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://www.w3.org/2003/05/soap-envelope">
+  <soap12:Body>
+    <TCKimlikNoDogrula xmlns="http://tckimlik.nvi.gov.tr/WS">
+      <TCKimlikNo>' + @TCKimlikNo + '</TCKimlikNo>
+      <Ad>' + @Ad + '</Ad>
+      <Soyad>' + @Soyad + '</Soyad>
+      <DogumYili>' + @DogumYili + '</DogumYili>
+    </TCKimlikNoDogrula>
+  </soap12:Body>
+</soap12:Envelope>';
+ 
+    DECLARE @RequestLength AS INT;
+    SET @RequestLength = LEN(@RequestBody);
+ 
+    DECLARE @Object AS INT;
+    DECLARE @ResponseText AS VARCHAR(8000);
+    EXEC sp_OACreate 'MSXML2.XMLHTTP', @Object OUT;
+    EXEC sp_OAMethod @Object,
+                     'open',
+                     NULL,
+                     'POST',
+                     'https://tckimlik.nvi.gov.tr/Service/KPSPublic.asmx?op=TCKimlikNoDogrula',
+                     'false';
+    EXEC sp_OAMethod @Object,
+                     'setRequestHeader',
+                     NULL,
+                     'Content-Type',
+                     'application/soap+xml; charset=utf-8';
+    EXEC sp_OAMethod @Object,
+                     'setRequestHeader',
+                     NULL,
+                     'Content-Length',
+                     @RequestLength;
+    EXEC sp_OAMethod @Object, 'send', NULL, @RequestBody;	
+    EXEC sp_OAMethod @Object, 'responseText', @ResponseText OUTPUT;
+ 
+   DECLARE @XMLSonuc XML
+   SET @XMLSonuc=@ResponseText
+	
+ 
+;WITH XMLNAMESPACES(
+	DEFAULT 'http://tckimlik.nvi.gov.tr/WS',
+	'http://www.w3.org/2003/05/soap-envelope' AS s
+	)
+    SELECT  TCKimlikNoDogrulaResult.value('.', 'NVARCHAR(255)') AS TCKimlikKontrolSonuc
+    FROM    @XMLSonuc.nodes('/s:Envelope/s:Body/TCKimlikNoDogrulaResponse/TCKimlikNoDogrulaResult') Node(TCKimlikNoDogrulaResult) 
+ 
+END
+
+--Kullanımı
+
+EXEC dbo.TCKimlikNoDogrula @TCKimlikNo = 12345678910, -- varchar(50) ----Kendi TC Kimlik Numaranızı yazın
+                            @Ad = N'YAVUZ SELİM',        -- nvarchar(50)  --Kendi adınız
+                            @Soyad = N'KART',     -- nvarchar(50)  --Kendi soyadınız
+                            @DogumYili = 2000  -- varchar(10) --Kendi doğum yılınızı yazın
+                            
