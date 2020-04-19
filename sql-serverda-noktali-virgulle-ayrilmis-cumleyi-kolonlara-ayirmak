@@ -1,0 +1,11 @@
+DECLARE @cumle VARCHAR(MAX) = 'Yavuz Selim,Kart;Hasan Ali,Kart';
+DECLARE @xmlcumle XML
+
+SET @xmlcumle
+    = CAST(('<rows><row><col>' + REPLACE(REPLACE(@cumle, ';', '</col></row><row><col>'), ',', '</col><col>')
+            + '</col></row></rows>'
+           ) AS XML)
+SELECT t.n.value('col[1]', 'CHAR(20)') AS Kolon1,
+       t.n.value('col[2]', 'CHAR(20)') AS Kolon2
+FROM @xmlcumle.nodes('/rows/row') AS t(n);
+
