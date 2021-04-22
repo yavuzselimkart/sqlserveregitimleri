@@ -1,0 +1,30 @@
+--SQL Server'da Northwind Sorgusu Örnekleri 11
+
+--1-) Çalışanlar ne kadarlık satış yapmışlar?
+
+
+SELECT 
+e.FirstName + ' ' + e.LastName AS CalisanAdSoyad,
+SUM(od.Quantity*od.UnitPrice) AS ToplamSatisMiktari
+FROM dbo.Employees e INNER JOIN dbo.Orders o ON o.EmployeeID = e.EmployeeID
+INNER JOIN  dbo.[Order Details] od ON od.OrderID = o.OrderID
+GROUP BY  e.FirstName + ' ' + e.LastName 
+
+
+--2-) Hangi sipariş bana ne kadar kazandırmış?
+
+SELECT 
+	OrderID,
+	SUM(UnitPrice*Quantity*(1-Discount))  AS Kazanc
+	FROM [Order Details]
+	GROUP BY OrderID
+
+
+--3-) 50'den fazla satışı olan çalışanlarımı nasıl bulurum?
+
+SELECT e.FirstName + ' ' + e.LastName AS CalisanAdSoyad,
+COUNT(o.OrderID) AS SatisMiktari
+FROM dbo.Orders o INNER JOIN 
+dbo.Employees e ON e.EmployeeID = o.EmployeeID
+GROUP BY  e.FirstName + ' ' + e.LastName
+HAVING COUNT(o.OrderID)>50
