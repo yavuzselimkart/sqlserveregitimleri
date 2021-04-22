@@ -1,0 +1,13 @@
+--SQL Server'da Northwind Sorgusu Örnekleri 6
+
+--1-) Müşteri adı A ile başlayan şirketler hangileridir?
+
+SELECT * FROM dbo.Customers WHERE CompanyName LIKE 'A%'
+
+--2-) Fax ve Region kısmı null olan müşteriler hangileridir?
+
+SELECT * FROM dbo.Customers WHERE Fax IS NULL AND Region IS NULL
+
+--3-) CustomerID'si AA ile biten müşterileri listeleyelim?
+
+SELECT * FROM dbo.Customers WHERE CustomerID LIKE '%AA'
