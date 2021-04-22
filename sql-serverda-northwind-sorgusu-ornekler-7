@@ -1,0 +1,19 @@
+--SQL Server'da Northwind Sorgusu Örnekleri 7
+
+--1-) Ürünlerin KDV dahil ve KDV hariç fiyatlarını ekrana yazdırın.
+
+SELECT ProductName,UnitPrice AS KDVHaric,(UnitPrice*0.18 + UnitPrice) AS KDVDahil  FROM dbo.Products
+
+--2-) KDV'si 10 TL'den düşük olan ürünler hangileridir?
+
+SELECT ProductName,(UnitPrice*0.18) AS KDVUcreti FROM dbo.Products WHERE (UnitPrice*0.18)<10
+
+--3-) En pahalı beş ürün nedir?
+
+SELECT TOP 5 ProductName,(UnitPrice*0.18 + UnitPrice) AS KDVDahil
+FROM dbo.Products ORDER BY KDVDahil DESC
+
+
+
+
+
