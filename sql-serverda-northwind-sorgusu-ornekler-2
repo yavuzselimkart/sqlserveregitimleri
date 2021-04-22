@@ -1,0 +1,17 @@
+--SQL Server'da Northwind Sorgusu Örnekleri 2
+
+--1-) Çalışan erkekleri listeleyelim.
+
+SELECT * FROM dbo.Employees WHERE  TitleOfCourtesy='Mr.'
+
+SELECT FirstName,LastName FROM dbo.Employees WHERE  TitleOfCourtesy='Mr.'
+
+--2-) Çalışan erkek ve kadın sayılarını bulalım.
+
+SELECT COUNT(*) AS CalisanErkek FROM dbo.Employees WHERE  TitleOfCourtesy='Mr.'
+
+SELECT COUNT(*) AS CalisanKadin FROM dbo.Employees WHERE TitleOfCourtesy IN ('Ms.','Mrs.')
+
+--3-) Çalışanlar kaç farklı şehirde çalışıyor listeleyelim.
+
+SELECT DISTINCT City FROM dbo.Employees
