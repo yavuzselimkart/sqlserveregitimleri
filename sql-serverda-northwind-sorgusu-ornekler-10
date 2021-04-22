@@ -1,0 +1,21 @@
+--SQL Server'da Northwind Sorgusu Örnekleri 10
+
+--1-) En pahalı ürünün adı nedir?
+
+SELECT ProductName FROM dbo.Products 
+WHERE UnitPrice=(SELECT MAX(UnitPrice) FROM dbo.Products)
+
+--2-) Müşterilerin ülkelere göre sayılarını veren sorgu
+
+SELECT Country AS Ülke, COUNT(CustomerID) AS MusteriSayisi 
+FROM dbo.Customers GROUP BY Country
+
+--3-) Her kategoriden kaç tane ürün var
+
+SELECT c.CategoryName,COUNT(p.ProductID) AS ToplamAdet 
+FROM dbo.Products p INNER JOIN dbo.Categories c 
+ON c.CategoryID=p.CategoryID
+GROUP BY CategoryName
+
+
+
