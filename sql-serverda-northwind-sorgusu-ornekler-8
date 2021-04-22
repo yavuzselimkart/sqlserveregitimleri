@@ -1,0 +1,15 @@
+--SQL Server'da Northwind Sorgusu Örnekleri 8
+
+--1-) En ucuz beş ürünün ortalama fiyatı nedir?
+
+SELECT AVG(Tablomuz.UnitPrice) AS OrtalamaFiyat FROM (
+SELECT TOP 5 UnitPrice FROM dbo.Products ORDER BY UnitPrice ASC 
+)  AS Tablomuz
+
+--2-) Ürün adlarını büyüterek getir.
+
+SELECT UPPER(ProductName) FROM dbo.Products
+
+--3-) Stoğu olmayan ürünler kaç tanedir?
+
+SELECT * FROM dbo.Products WHERE UnitsInStock=0
