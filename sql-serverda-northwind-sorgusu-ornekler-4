@@ -1,0 +1,14 @@
+--SQL Server'da Northwind Sorgusu Örnekleri 4
+
+--1-) Çalışanların yaşlarını bulalım
+
+SELECT FirstName, LastName, DATEDIFF(YEAR,BirthDate,GETDATE()) AS YAS FROM dbo.Employees
+
+--2-) Çalışanların işe kaç yaşında başladıklarını bulalım
+
+SELECT DATEDIFF(YEAR,BirthDate,HireDate) AS IseBaslangicTarihi  FROM dbo.Employees
+
+--3-) Region kolonu null olanları listeleyelim.
+
+SELECT * FROM dbo.Employees WHERE Region IS  NULL
+
