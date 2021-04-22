@@ -1,0 +1,14 @@
+--SQL Server'da Northwind Sorgusu Örnekleri 5
+
+--1-) Çalışanların adlarını a'dan z'ye ve z'den a'ya listeleyelim
+
+SELECT FirstName FROM dbo.Employees ORDER BY  FirstName ASC
+SELECT FirstName FROM dbo.Employees ORDER BY FirstName DESC
+
+--2-) Çalışanların adlarını a'dan z'ye soyadlarını z'den a'ya listeleyelim
+
+SELECT FirstName, LastName FROM dbo.Employees ORDER BY FirstName ASC, LastName DESC
+
+--3-) Şirket çalışanları ortalama yaşı nedir?
+
+SELECT  AVG(DATEDIFF(YEAR,BirthDate,GETDATE())) AS CalisanlarinToplamOrtalamaYasi FROM dbo.Employees
