@@ -1,0 +1,14 @@
+--SQL Server'da Northwind Sorgusu Örnekleri 3
+
+--1-) Doğum tarihi 1960-05-29 dan büyük olanları listeleyelim.
+
+SELECT * FROM dbo.Employees WHERE BirthDate>'1960-05-29'
+
+--2-) Adresinin içinde House geçen kişileri listeleyelim.
+
+SELECT FirstName,LastName FROM dbo.Employees WHERE [Address] LIKE '%House%' 
+
+--3-) Extension kolonu 3 haneli olanları listeleyelim
+
+SELECT Extension FROM dbo.Employees WHERE LEN(Extension)=3
+SELECT * FROM dbo.Employees WHERE LEN(Extension)=4
