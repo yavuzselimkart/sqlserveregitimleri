@@ -1,0 +1,15 @@
+--SQL Server'da Northwind Sorgusu Örnekleri 9
+
+--1-) Stok Adedi 20 ile 50 arasındaki ürünlerini getirin
+
+SELECT ProductName,UnitsInStock FROM dbo.Products WHERE UnitsInStock BETWEEN 20 AND 50
+
+--2-) En pahalı ürünün fiyatını getirin.
+
+SELECT MAX(UnitPrice) FROM dbo.Products
+
+--3-) Kaç çeşit ürün var?
+
+SELECT COUNT(ProductID) FROM dbo.Products 
+
+
