@@ -1,0 +1,19 @@
+--SQL Server'da Northwind Sorgusu Örnekleri 19
+
+--1-)  Beverages kategorisine ait ürünlerin listesi
+
+SELECT * FROM dbo.Products WHERE CategoryID = (SELECT CategoryID FROM dbo.Categories WHERE CategoryName='Beverages')
+
+--2-) Micheal'ın yada Laura'nın hemşerisi olan çalışanları listeleyelim?
+
+SELECT * FROM dbo.Employees WHERE City IN (SELECT City FROM dbo.Employees WHERE FirstName IN ('Michael','Laura'))
+
+--3-)  Ürünlerimin karşısına kategori getirme
+
+SELECT 
+p.ProductName,
+(SELECT c.CategoryName FROM dbo.Categories c WHERE c.CategoryID=p.CategoryID) AS CategoryName
+FROM dbo.Products p
+
+SELECT ProductName,CategoryName FROM dbo.Products INNER JOIN dbo.Categories ON
+Categories.CategoryID = Products.CategoryID
