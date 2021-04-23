@@ -1,0 +1,15 @@
+--SQL Server'da Northwind Sorgusu Örnekleri 12
+
+--1-) 100 $ ya da TL'den büyük ürünleri görmek istiyorum
+
+SELECT ProductName FROM dbo.Products WHERE UnitPrice>100
+
+--2-) UnitsInStock (stok) değeri 15’un altında olan ürünlerin adı, fiyatı ve stok bilgileri
+
+SELECT ProductName,UnitPrice,UnitsInStock FROM dbo.Products  WHERE UnitsInStock<15
+
+--3-) Brazil’de bulunan müşterilerin Şirket Adı, TemsilciAdi, Adres, Şehir, Ülke bilgileri
+
+SELECT CompanyName,ContactName,[Address],City,Country FROM dbo.Customers WHERE Country='Brazil'
+
+
