@@ -1,0 +1,13 @@
+--SQL Server'da Northwind Sorgusu Örnekleri 16
+
+--1-) Müşterilerimin içinde en uzun isimli müşterinin (harf sayısı) nedir?
+
+SELECT MAX(LEN(CompanyName)) AS MaksimumUzunluk FROM dbo.Customers
+
+--2-) Hangi üründen toplam kaç adet satılmış?
+
+SELECT ProductID,SUM(Quantity) AS AlinmişUrunAdedi FROM dbo.[Order Details] GROUP BY ProductID ORDER BY AlinmişUrunAdedi DESC
+
+--3-)  1000 Adetten fazla satılan ürünler nelerdir?
+
+SELECT ProductID,SUM(Quantity) AS AlinmişUrunAdedi FROM dbo.[Order Details] GROUP BY ProductID HAVING SUM(Quantity)>1000
