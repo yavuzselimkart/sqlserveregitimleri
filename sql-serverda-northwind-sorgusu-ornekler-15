@@ -1,0 +1,13 @@
+--SQL Server'da Northwind Sorgusu Örnekleri 15
+
+--1-)  Sipariş tarihleri 1 Haziran 1996 ile 30 Kasım 1993 tarihleri arasındaki siparişlerin OrderID ve ShipCountry bilgileri nedir?
+
+SELECT OrderID,ShipCountry FROM dbo.Orders WHERE OrderDate BETWEEN '1996-06-01' AND '1996-11-30'
+
+--2-) Kaç farklı ülkeye ihracat yapılıyor?
+
+SELECT COUNT(DISTINCT Country) AS UlkeSayisi FROM dbo.Customers
+
+--3-) ALFKI CustomerID’sine sahip müşterimin sipariş sayısı nedir?
+
+SELECT COUNT(*) AS  SiparisSayisi FROM dbo.Orders WHERE CustomerID='ALFKI'
