@@ -1,0 +1,14 @@
+--SQL Server'da Northwind Sorgusu Örnekleri 14
+
+--1-) Brezilya’da olmayan müşteriler
+
+SELECT CompanyName,ContactName,[Address],City,Country FROM dbo.Customers WHERE Country!='Brazil'
+
+--2-) Hem Mexico D.F’da ikamet eden hem de ContactTitle bilgisi 'owner' olan müşterileri listeleyin.
+
+SELECT CustomerID,ContactTitle,Address FROM dbo.Customers WHERE City ='México D.F.' AND ContactTitle='Owner'
+
+--3-) Satışı yapılmayan ürün listesi
+
+SELECT ProductName,UnitsInStock FROM dbo.Products WHERE Discontinued=1
+SELECT ProductName,UnitsInStock FROM dbo.Products WHERE Discontinued=1 AND UnitsInStock>0
