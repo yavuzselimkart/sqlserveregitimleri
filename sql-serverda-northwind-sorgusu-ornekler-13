@@ -1,0 +1,15 @@
+--SQL Server'da Northwind Sorgusu Örnekleri 13
+
+--1-) Londra ve Paris'te yaşayan müşterilerimi listeleyin?
+
+SELECT CompanyName,ContactName,City FROM dbo.Customers WHERE City IN ('London','Paris')
+
+--2-) Adı A harfi ile çalışan müşterilerimi listeleyin?
+
+SELECT * FROM dbo.Customers WHERE ContactName LIKE 'A%'
+SELECT * FROM dbo.Customers WHERE CompanyName LIKE 'A%'
+SELECT CompanyName,ContactName,Phone FROM dbo.Customers WHERE CompanyName LIKE 'A%' AND ContactName LIKE 'A%'
+
+--3-) 50$ ya da TL ile 100$ ya da TL arasında bulunan tüm ürünlerin adları ve fiyatları nelerdir?
+
+SELECT ProductName,UnitPrice FROM dbo.Products WHERE UnitPrice BETWEEN 50 AND 100
