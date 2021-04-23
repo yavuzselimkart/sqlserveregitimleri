@@ -1,0 +1,26 @@
+--SQL Server'da Northwind Sorgusu Örnekleri 18
+
+--1-)  Bütün nakliyecilerin listesi?
+
+SELECT CompanyName FROM dbo.Shippers
+
+--2-) Hangi çalışanım hangi bölgeden sorumludur?
+
+SELECT 
+e.LastName + ' ' + e.LastName AS AdSoyad, t.TerritoryDescription 
+FROM dbo.Employees e
+INNER JOIN dbo.EmployeeTerritories et ON et.EmployeeID = e.EmployeeID
+INNER JOIN dbo.Territories t ON t.TerritoryID = et.TerritoryID
+
+SELECT 
+e.LastName + ' ' + e.LastName AS AdSoyad, t.TerritoryDescription 
+FROM dbo.Employees e
+INNER JOIN dbo.EmployeeTerritories et ON et.EmployeeID = e.EmployeeID
+INNER JOIN dbo.Territories t ON t.TerritoryID = et.TerritoryID
+WHERE e.LastName + ' ' + e.LastName='Buchanan Buchanan'
+
+--3-)  Hangi tedarikçi hangi ürünü sağlıyor? 
+
+SELECT
+ProductName,CompanyName
+FROM dbo.Products INNER JOIN dbo.Suppliers ON Suppliers.SupplierID = Products.SupplierID
